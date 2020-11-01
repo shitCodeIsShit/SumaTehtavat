@@ -8,7 +8,9 @@ public class Main {
 		
 		ClockTimer timer = new ClockTimer();
 		DigitalClock digiClock = new DigitalClock(timer);
+		// Here could be a analog clock also
 		
+		// Loop tick indefenately
 		while(true) {
 			TimeUnit.SECONDS.sleep(1);
 			timer.tick();

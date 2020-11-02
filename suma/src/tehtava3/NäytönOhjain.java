@@ -1,15 +1,18 @@
 package tehtava3;
 
-public class NäytönOhjain extends LaiteOsa{
+public class NäytönOhjain implements LaiteOsa{
+
+	String nimi;
+	double hinta;
 
 	public NäytönOhjain(String nimi, double hinta) {
-		super(nimi, hinta);
+		this.nimi = nimi;
+		this.hinta = hinta;
 	}
 	
 	@Override
 	public double getHinta() {
-		// TODO Auto-generated method stub
-		return super.getHinta();
+		return hinta;
 	}
 
 }

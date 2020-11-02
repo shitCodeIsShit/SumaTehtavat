@@ -19,7 +19,8 @@ public class Main {
 		emolevynOsat.add(näyttis);
 		emolevynOsat.add(verkkokortti);
 		
-		Osa emolevy = new Emolevy("", 356, emolevynOsat);
+		Osa emolevy = new Emolevy("", 356);
+		emolevy.lisaa(emolevynOsat);
 		Osa virtalahde = new Virtalähde("", 287);
 		
 		List<Osa> kotelonOsat = new ArrayList<>();

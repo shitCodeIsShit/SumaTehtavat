@@ -5,17 +5,20 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class Kotelo extends LaiteOsa{
+public class Kotelo implements LaiteOsa{
 	
 	protected List<Osa> children = new ArrayList<>();
+	
+	String nimi;
+	double hinta;
 
 	public Kotelo(String nimi, double hinta, List<Osa> kotelonOsat) {
-		super(nimi, hinta);
-		lisaa(kotelonOsat);
+		this.nimi = nimi;
+		this.hinta = hinta;
 	}
 	
-	public void lisaa(List<Osa> kotelonOsat) {
-		children.addAll((Collection<? extends Osa>) Arrays.asList(kotelonOsat));
+	public void lisaa(Osa osa) {
+		children.addAll((Collection<? extends Osa>) osa);
 	}
 	
 	// Sisältää myös kotelon hinnan
@@ -32,7 +35,7 @@ public class Kotelo extends LaiteOsa{
 	
 	@Override
 	public double getHinta() {
-		return super.getHinta();
+		return hinta;
 	}
 
 }

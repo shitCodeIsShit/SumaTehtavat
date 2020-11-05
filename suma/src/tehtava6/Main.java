@@ -8,7 +8,7 @@ public class Main {
 		String salasana = "isojaMursujaLiikenteessa8438";
 		
 		// Luodaan perus tiedoston lukia
-		FileDataSource source = new FileDataSource(tiedostonNimi);
+		DataSource source = new FileDataSource(tiedostonNimi);
 		
 		// Kirjoitetaan salasana tiedostoon
 		source.writeData(salasana);
@@ -18,10 +18,10 @@ public class Main {
 		
 		// Luodaan decoraattori ja annetaan sille parametrinä source
 		// (annetaan sourcelle mahdollisuus pukea takki päälle)
-		DataSourceDecorator dsc = new DataSourceDecorator(source);
+		DataSource dsc = new DataSourceDecorator(source);
 		
 		// Käytetaan sourcen mahdollisuutta pukea takki päälle
-		EncryptionDecorator ed = new EncryptionDecorator(dsc);
+		DataSource ed = new EncryptionDecorator(dsc);
 		ed.writeData(salasana);
 		
 		// Katsotaan onko tieto muuttunut

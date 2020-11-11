@@ -3,9 +3,6 @@ package tehtava7;
 
 public class Charmander extends State {
 
-	private int taso;
-	private String nimi;
-
 	Charmander(Pokemon pokemon) {
 		super(pokemon);
 		pokemon.setTaso(1);
@@ -42,6 +39,7 @@ public class Charmander extends State {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			
 			
 			pokemon.nostaTasoa();
 			System.out.println("Nousin yhden tason ylöspäin olen nyt " + pokemon.getTaso());

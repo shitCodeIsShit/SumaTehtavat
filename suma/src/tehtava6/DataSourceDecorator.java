@@ -1,6 +1,6 @@
 package tehtava6;
 
-public class DataSourceDecorator implements DataSource{
+public abstract class DataSourceDecorator implements DataSource{
 	
 	private DataSource DStoWrapped;
 	

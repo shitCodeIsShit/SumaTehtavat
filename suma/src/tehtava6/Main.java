@@ -18,10 +18,11 @@ public class Main {
 		
 		// Luodaan decoraattori ja annetaan sille parametrinä source
 		// (annetaan sourcelle mahdollisuus pukea takki päälle)
-		DataSource dsc = new DataSourceDecorator(source);
+		// Tämä on turha vaihe
+		//DataSource dsc = new DataSourceDecorator(source);
 		
 		// Käytetaan sourcen mahdollisuutta pukea takki päälle
-		DataSource ed = new EncryptionDecorator(dsc);
+		DataSource ed = new EncryptionDecorator(source);
 		ed.writeData(salasana);
 		
 		// Katsotaan onko tieto muuttunut

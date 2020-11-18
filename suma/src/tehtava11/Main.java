@@ -22,6 +22,7 @@ public class Main {
 			}
 			
 			System.out.println("Väärin meni koita uudestaan!\n");
+			//TODO: asd
 			
 		}
 		

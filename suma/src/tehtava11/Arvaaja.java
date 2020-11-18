@@ -2,7 +2,8 @@ package tehtava11;
 
 public class Arvaaja {
 	
-	// arvaaja on asiakas ja kun se luodaan niin arvuuttaja palauttaa sille memento 
+	// kun luodaan arvaaja niin luonnin yhteyden luodaan arvattava nunero
+	// johon client ei pääse käsiksi
 	ArvattavaNumero an = new ArvattavaNumero();
 
 	public boolean arvaanNumeroa(int arvaus) {

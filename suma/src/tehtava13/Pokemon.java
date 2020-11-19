@@ -4,7 +4,7 @@ public class Pokemon {
 	
 	private State state;
 	
-	BonusPisteitaVisitor bpv = new BonusPisteitaVisitor();
+	Visitor bpv;
 	
 	private String nimi;
 	private int taso;
@@ -14,6 +14,11 @@ public class Pokemon {
 		this.state = new Charmander(this);
 		this.taso = 1;
 		this.nimi = "";
+		this.bpv = new BonusPisteitaVisitor();
+	}
+	
+	public Visitor getBpv() {
+		return bpv;
 	}
 	
 	public void kehity(State state) {
@@ -39,16 +44,7 @@ public class Pokemon {
 	// Joka kerta ku nostetaan tasoa niin käydään bonusvisitorissa
 	// ja lisätään oikea määr bisteitä :DDD
 	public void nostaTasoa() {
-		/*
-		System.out.println(this.state.getClass());
-		if(state.equals((Charmander) state)) {
-			bpv.visitCharmander((Charmander) state);
-		}else if(state.equals((Charmeleon) state)) {
-			bpv.visitCharmeleon((Charmeleon) state);
-		}else if(state.equals((Charizard) state)) {
-			bpv.visitCharizard((Charizard)state);
-		}
-		*/
+		
 		this.taso++;
 	}
 

@@ -44,6 +44,8 @@ public class Charmander extends State {
 			pokemon.nostaTasoa();
 			System.out.println("Nousin yhden tason ylöspäin olen nyt " + pokemon.getTaso());
 			
+			pokemon.bpv.visitCharmander(pokemon.getBpv());
+			
 			
 			
 			// Statementti jolla päästään pois arkielämästä

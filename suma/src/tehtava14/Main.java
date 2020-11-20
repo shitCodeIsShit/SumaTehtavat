@@ -13,13 +13,17 @@ public class Main {
 		kassa.luoHesburgerHamppari(hesburgerinHampurilaisBuilder);
 		Hampurilainen heseHamppari = hesburgerinHampurilaisBuilder.getHamppari();
 		
-		System.out.println(heseHamppari.getSampyla().getLeipa());
+		System.out.println(heseHamppari.toString());
+		
+		System.out.println();
+		
 		
 		// MCDONALDSIN SETIT haluuttiin stringinä
 		McDonalds mcDonaldsHampurilaiseBuilder = new McDonalds();
 		
 		kassa.luoMcDonaldsHamppari(mcDonaldsHampurilaiseBuilder);
-		String mcHamppari = mcDonaldsHampurilaiseBuilder.getHamppari();
+		// Siinä on vittu string builder!
+		StringBuilder mcHamppari = mcDonaldsHampurilaiseBuilder.getHamppari();
 		
 		System.out.println(mcHamppari);
 		

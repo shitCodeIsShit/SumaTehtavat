@@ -3,6 +3,8 @@ package tehtava14;
 // BUILDER
 public class McDonalds implements HampurilaisBuilder{
 	
+	private StringBuilder strB = new StringBuilder(1000);
+	
 	private Sampyla sampyla;
 	private Pihvi pihvi;
 	private Salaatti salaatti;
@@ -46,8 +48,8 @@ public class McDonalds implements HampurilaisBuilder{
 		return this.ketsuppi = ketsuppi;
 	}
 	
-	public String getHamppari() {
-		return new Hampurilainen(sampyla, pihvi, salaatti, kastike, mausteet, kurkku, ketsuppi).toString();
+	public StringBuilder getHamppari() {
+		return strB.append((new Hampurilainen(sampyla, pihvi, salaatti, kastike, mausteet, kurkku, ketsuppi).toString()));
 	}
 
 }
